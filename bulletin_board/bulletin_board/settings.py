@@ -155,7 +155,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / "static/"
 ]
 
 LOGIN_REDIRECT_URL = '/'
@@ -173,7 +173,7 @@ ACCOUNT_FORMS = {'signup': 'mmorpg.forms.BasicSignupForm'}
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'semenyak7'
-EMAIL_HOST_PASSWORD = 'ynqqavnmlyhtooqw'  # пароль от почты
+EMAIL_HOST_PASSWORD = 'ynqqavnmlyhtooqw'
 EMAIL_USE_SSL = True
 
 DEFAULT_FROM_EMAIL = 'semenyak7@yandex.ru'
