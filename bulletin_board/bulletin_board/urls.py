@@ -27,4 +27,5 @@ urlpatterns = [
     path('', PostList.as_view(), name='post_list'),
     path('post/', include('mmorpg.urls')),
     path('post/search/', CommentListFiltered.as_view(), name='comment_search'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
