@@ -35,9 +35,9 @@
                <td><a href="/post/{{ one.id }}/">{{ one.title|censor }}</a></td>
                <td>{{ one.content| safe }}</td>
                 {% if one.to_comment %}
-                    <td><button> <a href="/post/{{ one.id }}/create/">Создать объявление</a> </button></td>
                 {% endif %}
                 {% if one.to_edit %}
+                    <td><button> <a href="/post/{{ one.id }}/create/">Добавить комментарий</a> </button></td>
                     <td><button> <a href="/post/{{ one.id }}/edit/">Изменить объявление</a> </button></td>
                 {% endif %}
                 {% if one.to_edit %}

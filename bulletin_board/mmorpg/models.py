@@ -20,7 +20,7 @@ class Post(models.Model):
     date_of_creation = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=1, choices=CATEGORIES)
     title = models.CharField(max_length=128)
-    content = RichTextUploadingField(blank=True, null=True)
+    content = RichTextUploadingField(config_name='default', blank=True, null=True)
 
     def __str__(self):
         return f'{self.id}: {self.author}: {self.date_of_creation}: ' \

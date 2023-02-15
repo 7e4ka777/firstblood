@@ -2,7 +2,7 @@ from allauth.account.forms import SignupForm
 from django import forms
 from django.contrib.auth.models import User
 from .models import Post, Comment
-from django.core.exceptions import ValidationError
+# from django.core.exceptions import ValidationError
 from ckeditor.widgets import CKEditorWidget
 
 
@@ -28,17 +28,19 @@ class UserForm(forms.ModelForm):
        ]
 
 class PostForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorWidget())
     class Meta:
        model = Post
-       fields = [
-           'category',
-           'title',
-           'content',
-       ]
+       fields = '__all__'
+       # fields = [
+       #     # 'category',
+       #     # 'title',
+       #     # 'content',
+       # ]
 
-    def clean(self):
-       cleaned_data = super().clean()
-       return cleaned_data
+    # def clean(self):
+    #    cleaned_data = super().clean()
+    #    return cleaned_data
 
 class CommentForm(forms.ModelForm):
 

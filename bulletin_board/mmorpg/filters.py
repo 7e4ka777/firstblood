@@ -7,7 +7,7 @@ from django import forms
 class CommentFilter(FilterSet):
     post = django_filters.ChoiceFilter(choices=None, label="Сообщение:", empty_label="Все сообщения")
 
-    creation = django_filters.DateFilter(widget=forms.DateInput(attrs={'type': 'date'}),
+    date_of_creation = django_filters.DateFilter(widget=forms.DateInput(attrs={'type': 'date'}),
                                          label="Создано позднее, чем ", lookup_expr='date__gt')
     approved = django_filters.ChoiceFilter(choices=[('0', 'Нет'), ('1', 'Да')], label="Согласован:",
                                            lookup_expr='iexact', empty_label="Не важно")

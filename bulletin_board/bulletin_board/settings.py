@@ -44,13 +44,13 @@ INSTALLED_APPS = [
     'django_filters',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'ckeditor',
-    'ckeditor_uploader',
     'mmorpg.apps.MmorpgConfig',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 SITE_ID = 1
@@ -250,3 +250,5 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+# FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
